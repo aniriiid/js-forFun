@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -7,7 +8,10 @@ body {
     min-height: 100vh;
     padding: 100px;
     box-sizing: border-box;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    /* display: flex; */
+    gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -33,4 +37,9 @@ body {
 .card:hover {
     transform: scale(1.02, 1.02);
     box-shadow: 1px 1px 5px #02a298aa, 1px 1px 15px #02a298aa;
+}
+
+
+.card:first-child {
+    grid-column-end: span 6;
 }
